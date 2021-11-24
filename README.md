@@ -4,7 +4,7 @@ Respositório de código das aulas do Técnico em Informática para Internet 202
 
 
 ## Checklist
-- [X] Algorítmo
+- [X] [Algorítmo](docs/algoritmo.md)
 - [ ] Fluxograma
 - [ ] Javascript
 - [ ] NodeJS
