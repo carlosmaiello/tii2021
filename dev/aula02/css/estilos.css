@@ -1,0 +1,8 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; font-size: 20px;}
+
+form div { margin: 20px; }
+
+form input { padding: 10px 20px; }
+form button { width: 100%; padding: 10px 20px; }
+#res { font-size: 60px; }

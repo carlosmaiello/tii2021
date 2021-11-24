@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="conteudo">
+        <ul class="menu">
+          <li>
+            <a href="#">Menu</a>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="pagina2.html">Página 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="area1">
+        <div class="conteudo">
+          <h1>Olá mundo!</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem libero odit itaque similique suscipit repellat culpa
+            debitis! Consectetur asperiores unde quae ducimus doloremque alias
+            minus sunt. Aliquid corrupti nisi incidunt.
+          </p>
+
+          <a href="pagina2.html">Ir para a página 2</a>
+
+          <ul id="lista"></ul>
+          <button id="btn" onclick="clicou()">Adicionar</button>
+        </div>
+      </section>
+      <section class="area2">
+        <div class="conteudo"></div>
+      </section>
+
+      <section class="area3">
+        <div class="conteudo">
+          <h1>Área 3</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem libero odit itaque similique suscipit repellat culpa
+            debitis! Consectetur asperiores unde quae ducimus doloremque alias
+            minus sunt. Aliquid corrupti nisi incidunt.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // var idade = prompt("Digite sua idade!");
+
+      // if (+idade < 18 ) {
+      //     document.getElementById("btn").style.display = "none";
+      // }
+
+      function clicou() {
+        document.getElementById("lista").innerHTML +=
+          "<li>" + prompt("Digite o nome") + "</li>";
+      }
+    </script>
+  </body>
+</html>
