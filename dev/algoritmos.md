@@ -78,3 +78,6 @@ console.log(imc);
 
 2. Elaborar um programa que apresente o valor da conversão em real (R\$) de um valor lido em dólar (US$). O programa deve solicitar o valor da cotação do dólar
 3. Construir um programa que leia um valor numérico inteiro e apresente como resultado os seus valores: sucessor e antecessor.
+4. Crie um programa que lê o ano de nascimento de uma pessoa e o ano atual. Calcule e mostre qual é: a idade da pessoa em anos, a idade da pessoa em meses, a idade da pessoa em dias e a idade da pessoa em semanas.
+5. Ler dois valores para as variáveis A e B e efetuar a troca dos valores de forma que a variável A passe a possuir o valor da variável B e a variável B passe a possuir o valor da variável A. Apresentar os valores após a efetivação do processamento da troca.
+6. Elaborar um programa de computador que calcule e apresente o valor do volume de uma esfera. Utilize a fórmula VOLUME <- (4 / 3) * 3.14159 * (RAIO3).
