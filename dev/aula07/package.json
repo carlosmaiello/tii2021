@@ -1,7 +1,8 @@
 {
-  "name": "aula06",
+  "name": "aula07",
   "version": "1.0.0",
-  "main": "ex1.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +11,5 @@
   "license": "ISC",
   "dependencies": {
     "prompt-sync": "^4.2.0"
-  },
-  "description": ""
+  }
 }

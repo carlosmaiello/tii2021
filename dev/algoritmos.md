@@ -73,13 +73,13 @@ console.log(imc);
 #### Comando IF (SE)
 
 if (<teste lógico>) {
-    <comandos>
+    \<comandos\>
 }
 
 ou
 
 if (<teste lógico>)
-    <comando>
+    \<comando\>
 
 
 onde:
@@ -90,18 +90,18 @@ onde:
 #### Comando ELSE (SENÃO)
 
 if (<teste lógico>) {
-    <comandos>
+    \<comandos\>
 }
 else {
-    <comandos senão>
+    \<comandos senão\>
 }
 
 ou
 
 if (<teste lógico>)
-    <comando>
+    \<comando\>
 else
-    <comando senão>
+    \<comando senão\>
 
 onde:
 
@@ -123,6 +123,24 @@ No teste lógico podemos colocar operadores de comparaçãoa como:
 - && - Operador E - as duas expressões devem ser verdadeiras
 - || - Operador OU - uma das duas expressões devem ser verdadeiras
 - ! - Operador Não - Inverte o valor da expressão
+
+##### Tabela Verdade E
+
+A  B  R
+F  F  F
+F  V  F
+V  F  F
+V  V  V
+
+##### Tabela Verdade OU
+
+A  B  R
+F  F  F
+F  V  V
+V  F  V
+V  V  V
+
+
 
 #### Exercícios
 1. Escreva um programa que pergunte dois números e indique se são iguais ou diferentes. Caso sejam diferentes, mostre o maior e o menor, nesta ordem.
