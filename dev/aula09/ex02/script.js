@@ -11,6 +11,14 @@ function verificar() {
     }
     else {
         document.getElementById('resultado').innerHTML = `Os valores são iguais`;
-    }
-    
+    } 
+
+    limpar();
+}
+
+function limpar() {
+    document.getElementById('numero1').value = '';
+    document.getElementById('numero2').value = '';
+
+    document.getElementById('numero1').focus();
 }
