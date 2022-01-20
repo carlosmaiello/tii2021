@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <title>Adivinhe o número</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Adivinhe o número</h1>
+
+        <hr>
+
+        <form>
+            <div class="form-group">
+                <label for="numero">Número</label>
+                <input type="text" class="form-input" id="numero" aria-describedby="numeroHelp">
+                <small id="numeroHelp" class="form-text text-muted">Digite um número entre 0 e 10.</small>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg" onclick="verificar()">Verifique</button>
+        </form>
+
+        <hr>
+        <div class="row">
+            <div class="col">Resultado:</div>
+            <div id="resultado" class="col">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
