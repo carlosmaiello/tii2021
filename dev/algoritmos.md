@@ -158,6 +158,14 @@ V  V  V
 5. Escreva um programa que solicite duas datas pelo teclado e imprima primeiro a menor data seguida da maior data
 6. Escreva um programa para verificar a validade de uma data. O programa pergunta o dia, mês e ano de uma data (separadamente em três variáveis inteiras) e imprime uma mensagem indicando se a data é válida ou não (devem ser considerados os anos bissextos).
 
+## While
+
+### Exercícios
+1) Mostre os número de 1 à 10
+2) Mostre os números de 1 à 10 marcando os pares
+3) Mostre os números pares entre 1 e 10
+4) Mostre os números de 1 à 10 de forma decrescente
+5) Calcule o fatorial de um número
 
 ## Array
 
