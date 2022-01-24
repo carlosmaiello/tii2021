@@ -167,3 +167,13 @@ var numerosPares = [2, 4, 5, 6, 8, 10];
 console.log(frutas[0]); // Maça
 
 numerosPares[3];
+
+### Links
+- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+- https://www.devmedia.com.br/javascript-arrays/4079
+
+### Exercícios 
+1. Crie um array com uma lista de fruntas e mostre na tela
+2. Solicite ao usuário que digite uma lista de números, ao concluir faça a soma dos números digitados.
+3. Solicite ao usuário que digite uma lista de números, ao concluir mostre o maior número da lista.
+4. Faça uma lista de tarefas onde o usuário poderá adicionar ou remover ítens da lista.
