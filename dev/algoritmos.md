@@ -158,7 +158,21 @@ V  V  V
 5. Escreva um programa que solicite duas datas pelo teclado e imprima primeiro a menor data seguida da maior data
 6. Escreva um programa para verificar a validade de uma data. O programa pergunta o dia, mês e ano de uma data (separadamente em três variáveis inteiras) e imprime uma mensagem indicando se a data é válida ou não (devem ser considerados os anos bissextos).
 
-## While
+## IF
+### Links
+- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else
+
+### Exercícios
+1) Solicite ao usuário que digita um número e determine se ele é PAR ou ÍMPAR
+2) Solicite ao usário que digite 2 números e apresente qual é o maior
+3) Solicite ao usuário que digite o nome do mês e apresente o nome da estação do ano
+4) Escolha um número aleatório e solicite que o usuário tente adivinhar qual o número. A cada tentativa você informará se o número digitado pelo usuário é MAIOR ou MENOR. Caso ele acerte o número, mostre uma mensagem e encerre o jogo. 
+
+## Laços
+
+### Links
+- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while
+- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for
 
 ### Exercícios
 1) Mostre os número de 1 à 10
