@@ -157,3 +157,13 @@ V  V  V
 4. Escreva um programa que pergunte três valores distintos e os imprima em ordem crescente
 5. Escreva um programa que solicite duas datas pelo teclado e imprima primeiro a menor data seguida da maior data
 6. Escreva um programa para verificar a validade de uma data. O programa pergunta o dia, mês e ano de uma data (separadamente em três variáveis inteiras) e imprime uma mensagem indicando se a data é válida ou não (devem ser considerados os anos bissextos).
+
+
+## Array
+
+var frutas = ["Maça", "Banana", "Melão"];
+var numerosPares = [2, 4, 5, 6, 8, 10];
+
+console.log(frutas[0]); // Maça
+
+numerosPares[3];
