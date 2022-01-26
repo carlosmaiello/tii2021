@@ -181,6 +181,48 @@ V  V  V
 4) Mostre os números de 1 à 10 de forma decrescente
 5) Calcule o fatorial de um número
 
+
+## Function (Função)
+
+É um conjunto de instruções que pode ser reaproveitado em diversas partes do programa. Ela pode receber parâmetros retornar um resultado.
+
+a função é declarada da seguinte forma:
+
+function <nome da função>(<parâmetros>) {
+    return <valor retornado>;
+}
+
+Exemplo 1:
+console.log("Texto")
+
+Exemplo 2:
+function data(dia, mes, ano) {
+    return `${dia}/${mes}/${ano}`;
+}
+
+Para chamar a função utilizamos o nome e passamos os parâmetros:
+
+data(1,2,2021)
+
+Para utilizar o retorno é só atribuir o valor para uma variável:
+
+var d = data(1,2,2021)
+
+
+Não é obrigatório ter parâmetros ou retorno:
+
+function nome() {
+    return "Carlos Maiello";
+}
+
+console.log(nome());
+
+function imprimirData() {
+    console.log(data(1,2,2021));
+}
+
+imprimirData();
+
 ## Array
 
 var frutas = ["Maça", "Banana", "Melão"];
@@ -199,3 +241,11 @@ numerosPares[3];
 2. Solicite ao usuário que digite uma lista de números, ao concluir faça a soma dos números digitados.
 3. Solicite ao usuário que digite uma lista de números, ao concluir mostre o maior número da lista.
 4. Faça uma lista de tarefas onde o usuário poderá adicionar ou remover ítens da lista.
+
+
+## Objetos
+
+### Links
+- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects
+- https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Basics
+
