@@ -1,54 +1,39 @@
-/**
- * 5. Escreva um programa que solicite duas datas pelo teclado e imprima primeiro a menor data seguida da maior data
- 
- 
- 01/01/2021 - 01/01/2022
 
- 01/02/2021 - 01/03/2021
-
- 01/03/2021 - 02/03/2021
- */
-
- const prompt = require('prompt-sync')();
-
-
-console.log('Digite a primeira data: ');
- var dia1 = prompt('Dia: ');
- var mes1 = prompt('Mês: ');
- var ano1 = prompt('Ano: ');
-
-console.log('Digite a segunda data: ');
- var dia2 = prompt('Dia: ');
- var mes2 = prompt('Mês: ');
- var ano2 = prompt('Ano: ');
-
- console.log('');
-
- var data1 = `${dia1}/${mes1}/${ano1}`;
- var data2 = `${dia2}/${mes2}/${ano2}`;
- 
-if (ano1 > ano2) {
-    console.log(data2, data1);
+function data(d, m, a) {
+    return `${d}/${m}/${a}`;
 }
-else if (ano1 < ano2) {
-    console.log(data1, data2);
-}
-else {
-    if (mes1 > mes2) {
-        console.log(data2, data1);
-    }
-    else if (mes1 < mes2) {
-        console.log(data1, data2);
+
+function validaData(dia, mes, ano) {
+    if (ano < 1 || mes < 1 || mes > 12 || dia < 1 || dia > 31) {
+        return false;
     }
     else {
-        if (dia1 > dia2) {
-            console.log(data2, data1);
+        if (mes == 2) {
+            if ((ano % 400 == 0 || (ano % 4 == 0 && ano % 100 != 0))) {
+                if (dia > 29) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+            else if (dia > 28) {
+                return false;
+            }
+            else {
+                return true;
+            }
         }
-        else if (dia1 < dia2) {
-            console.log(data1, data2);
+        else if (
+            ((mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) && dia > 31) ||
+            ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30)
+        ) {
+            return false;
         }
         else {
-            console.log("Datas iguais");
+            return true;
         }
     }
 }
+
+module.exports = { data, validaData };
