@@ -11,6 +11,7 @@ function adicionar() {
 
     mostrar();
     somar();
+    maior();
       
 }
 
@@ -29,4 +30,15 @@ function somar() {
     });
 
     document.getElementById('soma').innerHTML = soma;
+}
+
+function maior() {
+    var valor = 0;
+
+    numeros.forEach(function (item) {
+        if (item > valor)
+            valor = item;
+    });
+
+    document.getElementById('maior').innerHTML = valor;
 }
