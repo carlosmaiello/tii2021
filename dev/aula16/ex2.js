@@ -5,11 +5,11 @@ var numeros = [];
 var sair = false;
 
 while (!sair) {
-    let n = +prompt("Digite um número (0 para sair): ");
-    sair = (n == 0);
-    if (!sair) {
-        numeros.push(n); 
-    }
+    var n = +prompt('Digite um valor: ');
+    numeros.push(n);
+
+    var opcao = prompt('Deseja continuar (S/N): ');
+    sair = opcao.toUpperCase() == "N";
 }
 
 var total = 0;
