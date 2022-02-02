@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,38 +8,54 @@
     <title>Tarefas</title>
     <script src="https://unpkg.com/vue@next"></script>
 </head>
+
 <body>
     <div id="app">
         <h1>Lista de Tarefas</h1>
         <form @submit.prevent="adicionar()">
             <input type="text" v-model="texto">
+            Concluído? <input type="checkbox" v-model="concluida">
             <button>Adicionar</button>
         </form>
         <ul>
             <li v-for="tarefa in tarefas">
-                <h4>{{ tarefa }}</h4>
+                #{{ tarefa.id }}
+                {{ tarefa.titulo }}
+                <b v-if="tarefa.concluida">(concluída)</b>
             </li>
         </ul>
+        {{ tarefas }}
     </div>
 
     <script>
         const App = {
-            data () {
+            data() {
                 return {
                     texto: "",
+                    concluida: false,
+                    proximoId: 1,
                     tarefas: []
                 }
             },
             methods: {
-                adicionar () {
-                    this.tarefas.push(this.texto);
+                adicionar() {
+                    let tarefa = {
+                        id: this.proximoId++,
+                        titulo: this.texto,
+                        concluida: this.concluida
+                    };
+
+                    this.tarefas.push(tarefa);
+
                     this.texto = "";
+                    this.concluida = false;
                 }
             }
         };
 
         Vue.createApp(App).mount('#app');
     </script>
-    
+
 </body>
+
 </html>
