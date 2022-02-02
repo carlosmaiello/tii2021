@@ -7,15 +7,12 @@
     <title>Contador</title>
 </head>
 <body>
-
     <div id="contador">
         Contador: {{ contador }}
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
-
     <script>
-
         const Contador = {
             data () {
                 return {
@@ -28,10 +25,7 @@
                 }, 1000)
             }
         }
-
         Vue.createApp(Contador).mount("#contador");
-
     </script>
-    
 </body>
 </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incrementador</title>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        * { box-sizing: border-box;}
+        #incrementador div {
+            display: inline-block;
+            text-align: center; 
+        }
+        h3 {
+            text-align: center;
+        }
+
+        input, .input { text-align: center; width: 50px;}
+        .btn { min-width: 22px;}
+    </style>
+</head>
+
+<body>
+
+    <div id="incrementador">
+        <div class="btn">
+            <button type="button" @click="decrementar()" 
+            v-if="numero > min"> - </button>
+        </div>
+        <div class="input">
+            <input type="text" v-model="numero">
+        </div>
+        <div class="btn">
+            <button type="button" @click="incrementar()" 
+            v-if="numero < max"
+
+            @mousedown="incrementarVarios()" @mouseup="cancelarIncrementarVarios()" @mouseout="cancelarIncrementarVarios()"> + </button>
+        </div>
+    </div>
+    <script>
+        const Incrementador = {
+            data() {
+                return {
+                    numero: 1,
+                    min: 1,
+                    max: 10,
+                    inInterval: null
+                }
+            },
+            methods: {
+                incrementar() {
+                    if (this.numero < this.max)
+                        this.numero++;
+                },
+                decrementar() {
+                    if (this.numero > this.min)
+                        this.numero--;
+                },
+                incrementarVarios() {
+                    this.inInterval = setInterval(() => {
+                        this.incrementar();
+                    }, 300);
+                },
+                cancelarIncrementarVarios() {
+                    clearInterval(this.inInterval);
+                }
+            }
+        };
+
+        Vue.createApp(Incrementador).mount("#incrementador");
+    </script>
+
+</body>
+
+</html>

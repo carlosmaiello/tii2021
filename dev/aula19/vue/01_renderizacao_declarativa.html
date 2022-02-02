@@ -5,9 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renderização declarativa</title>
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
+    <h1>Vue</h1>
 
-    <script src="https://unpkg.com/vue@next"></script>
+    <div id="app">
+        <h3>{{ nome }}</h3>
+        <p>Contador: {{ contador }}</p>
+        <p>{{usuario.nome }} {{usuario.email }} {{usuario.id}}</p>
+    </div>
+
+
+    <script>
+        const Nome = {
+            data () {
+                return {
+                    nome: 'Carlos',
+                    contador: 0,
+                    usuario: {
+                        id: 2,
+                        nome: 'José Silva',
+                        email: 'josesilva@gmail.com',
+                        senha: '123'
+                    }
+                }
+            },
+            mounted() {
+                setInterval(() => {
+                    this.contador++;
+                }, 1000);
+            }
+        };
+
+        Vue.createApp(Nome).mount('#app');
+    </script>
 </body>
 </html>
