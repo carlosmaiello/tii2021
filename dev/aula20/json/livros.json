@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "titulo": "A ilha perdida",
+        "sinopse": "...",
+        "ano": 1944,
+        "edicao": 1,
+        "classificacaoEtaria": "Infantil",
+        "idioma": "pt-br",
+        "genero": {
+            "id": 1,
+            "titulo": "Aventura"
+        },
+        "autores": [
+            {
+                "id": 1,
+                "nome": "Maria",
+                "sobrenome": "Fernandes",
+                "email": "",
+                "site": ""
+            },
+            {
+                "id": 2,
+                "nome": "José",
+                "sobrenome": "Fernandes",
+                "email": "",
+                "site": ""
+            }
+        ],
+        "editora": {
+            "id": 1,
+            "nome": "Vagalume"
+        }
+    }
+]
