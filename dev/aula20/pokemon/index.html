@@ -14,10 +14,27 @@
 
     <div id="app">
         <ul class="pokedex">
-            <li v-for="pokemon in pokemons">
+            <li v-for="pokemon in pokemons" :id="`pokemon_${pokemon.num}`">
                 <img :src="pokemon.img">
                 <h6>{{ pokemon.num }}</h6>
                 <h3>{{ pokemon.name }}</h3>
+
+                <div class="evolutions next" v-if="pokemon.next_evolution">
+                    <h5>Próximas Evoluções</h5>
+                    <ul>
+                        <li v-for="next in pokemon.next_evolution">
+                            <a :href="`#pokemon_${next.num}`">{{ next.num }} - {{ next.name }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="evolutions prev" v-if="pokemon.prev_evolution">
+                    <h5>Evoluções Anteriores</h5>
+                    <ul>
+                        <li v-for="prev in pokemon.prev_evolution">
+                            <a :href="`#pokemon_${prev.num}`">{{ prev.num }} - {{ prev.name }}</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </div>
