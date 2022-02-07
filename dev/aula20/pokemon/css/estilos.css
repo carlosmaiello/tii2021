@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+
+.pokedex {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pokedex li {
+    text-align: center;
+}
+
+.pokedex li h6 { margin: 0; }
+.pokedex li h3 { margin: 0; }
