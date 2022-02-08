@@ -1,0 +1,37 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #1d1d1d;
+}
+
+a { text-decoration: none; color: #5d5d5d;}
+a:hover { color: #1d1d1d;}
+
+.pokedex {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pokedex > li {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #cdcdcd;
+    flex: 1 1 200px;
+}
+
+.pokedex > li h6 { margin: 0; }
+.pokedex > li h3 { margin: 0; }
+
+.pokedex .evolutions h5 { margin-bottom: 5px; }
+.pokedex .evolutions ul {
+    padding: 0;
+    list-style: none;
+    font-size: 11px;
+}
