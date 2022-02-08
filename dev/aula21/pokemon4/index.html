@@ -14,6 +14,7 @@
 
     <div id="app">
         <header>
+            <h1>Pokedex</h1>
             <input type="text" placeholder="Nome do Pokemon" v-model="nome">
             <label>
                 <input type="radio" v-model="ordenadoPor" value="N"> Nome
@@ -21,29 +22,19 @@
             <label>
                 <input type="radio" v-model="ordenadoPor" value="U"> Número
             </label>
+
+
+            <select v-model="tipo">
+                <option value="">Todos</option>
+                <option :value="type.english" v-for="type in types">{{ type.english }}</option>
+            </select>
         </header>
         <ul class="pokedex">
             <li v-for="pokemon in pokemonsFiltrados" :id="`pokemon_${pokemon.num}`">
-                <img :src="pokemon.img">
-                <h6>{{ pokemon.num }}</h6>
-                <h3>{{ pokemon.name }}</h3>
-
-                <div class="evolutions next" v-if="pokemon.next_evolution">
-                    <h5>Próximas Evoluções</h5>
-                    <ul>
-                        <li v-for="next in pokemon.next_evolution">
-                            <a :href="`#pokemon_${next.num}`">{{ next.num }} - {{ next.name }}</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="evolutions prev" v-if="pokemon.prev_evolution">
-                    <h5>Evoluções Anteriores</h5>
-                    <ul>
-                        <li v-for="prev in pokemon.prev_evolution">
-                            <a :href="`#pokemon_${prev.num}`">{{ prev.num }} - {{ prev.name }}</a>
-                        </li>
-                    </ul>
-                </div>
+                <img :src="pokemon.thumbnail">
+                <h3>{{ pokemon.name.english }}</h3>
+                <h6>{{ pokemon.species }}</h6>
+                <p>{{ pokemon.description }}</p>
             </li>
         </ul>
     </div>
