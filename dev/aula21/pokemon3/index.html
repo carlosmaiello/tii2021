@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <input type="text" placeholder="Nome do Pokemon" v-model="nome">
+            <label>
+                <input type="radio" v-model="ordenadoPor" value="N"> Nome
+            </label>
+            <label>
+                <input type="radio" v-model="ordenadoPor" value="U"> Número
+            </label>
+        </div>
+        <ul class="pokedex">
+            <li v-for="pokemon in pokemonsFiltrados" :id="`pokemon_${pokemon.num}`">
+                <img :src="pokemon.img">
+                <h6>{{ pokemon.num }}</h6>
+                <h3>{{ pokemon.name }}</h3>
+
+                <div class="evolutions next" v-if="pokemon.next_evolution">
+                    <h5>Próximas Evoluções</h5>
+                    <ul>
+                        <li v-for="next in pokemon.next_evolution">
+                            <a :href="`#pokemon_${next.num}`">{{ next.num }} - {{ next.name }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="evolutions prev" v-if="pokemon.prev_evolution">
+                    <h5>Evoluções Anteriores</h5>
+                    <ul>
+                        <li v-for="prev in pokemon.prev_evolution">
+                            <a :href="`#pokemon_${prev.num}`">{{ prev.num }} - {{ prev.name }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
