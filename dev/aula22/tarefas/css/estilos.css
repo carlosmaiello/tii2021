@@ -1,0 +1,5 @@
+* { box-sizing: border-box }
+.listas { display: flex; list-style: none; padding-left: 0; }
+.listas li {  }
+.listas li a { display: block; padding: 5px 10px; text-decoration: none; border: 1px solid #c1c1c1; margin: 5px; }
+.listas li.selecionado a { background-color: aqua;  }

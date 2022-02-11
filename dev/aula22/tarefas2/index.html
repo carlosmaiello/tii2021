@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>
+        Lista de Tarefas
+        <a href="#" @click.prevent="novaTarefa()" class="btn">Adicionar</a>
+      </h1>
+      <ul class="listas">
+        <li
+          v-for="lista in listas"
+          :class="{'selecionado': listaSelecionada && listaSelecionada.id == lista.id}"
+        >
+          <a href="#" @click.prevent="selecionarLista(lista)"
+            >{{lista.titulo}}</a
+          >
+        </li>
+      </ul>
+
+      <div v-if="listaSelecionada">
+        <ul class="tarefas">
+          <li class="tarefas-item" v-for="tarefa in tarefas">
+            <div class="id">#{{ tarefa.id }}</div>
+             <div class="titulo">{{ tarefa.titulo }}</div>
+             <div class="concluida"><b v-if="tarefa.concluida">(concluída)</b></div>
+             <div class="acoes">
+               <a href="#" @click.prevent="alterarTarefa(tarefa)">Alterar</a>
+             </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="formulario" v-if="tarefaSelecionada" class="modal">
+        <div class="modal-fundo" @click.prevent="tarefaSelecionada = null"></div>
+        <div class="modal-corpo">
+          <div class="modal-titulo">
+            <h3>{{ modal.titulo }}</h3>
+            <a class="btn fechar" href="#" @click.prevent="tarefaSelecionada = null">X</a>
+          </div>
+          <div class="modal-conteudo">
+            <form @submit.prevent="salvar()">
+              <div class="campo">
+                <input type="text" v-model="tarefaSelecionada.titulo" />
+              </div>
+              <div class="campo">
+                <label>
+                  Concluído?
+                  <input
+                    type="checkbox"
+                    v-model="tarefaSelecionada.concluida"
+                  />
+                </label>
+              </div>
+              <button>Salvar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="js/app.mjs"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Lista de Tarefas</h1>
+      <ul class="listas">
+        <li
+          v-for="lista in listas"
+          :class="{'selecionado': listaSelecionada && listaSelecionada.id == lista.id}"
+        >
+          <a href="#" @click.prevent="selecionarLista(lista)"
+            >{{lista.titulo}}</a
+          >
+        </li>
+      </ul>
+
+      <div class="tarefas" v-if="listaSelecionada">
+        <form @submit.prevent="salvar()">
+          <input type="text" v-model="tarefaSelecionada.titulo" />
+          Concluído? <input type="checkbox" v-model="tarefaSelecionada.concluida" />
+          <button>Salvar</button>
+        </form>
+        <ul>
+          <li v-for="tarefa in tarefas">
+            #{{ tarefa.id }} {{ tarefa.titulo }}
+            <b v-if="tarefa.concluida">(concluída)</b>
+            <a href="#" @click.prevent="alterarTarefa(tarefa)">Alterar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="module" src="js/app.mjs"></script>
+  </body>
+</html>
