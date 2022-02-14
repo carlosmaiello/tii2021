@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <div class="form">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" v-model="fruta.nome">
+            </div>
+            <div class="campo">
+                <label for="cor">Cor</label>
+                <input type="text" id="cor" v-model="fruta.cor">
+            </div>
+            <button @click="salvar()">Salvar</button>
+        </div>
+
+
+        <ul class="cores">
+            <li v-for="cor in cores">{{ cor }}</li>
+        </ul>
+        
+        <div class="loading-wrapper">
+            <div class="loading" v-if="carregandoFrutas">
+                <img src="img/loading.gif" alt="">
+            </div>
+
+            <ul class="frutas">
+                <li v-for="fruta in frutas">
+                    {{ fruta.nome }}
+                    {{ fruta.cor }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>
