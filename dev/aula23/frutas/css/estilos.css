@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+
+body { font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 16px; }
+.loading-wrapper { 
+    position: relative;
+}
+
+.loading-wrapper .loading { position: absolute; }
+
+table { display: flex; }
+table tr > * { padding: 5px; flex: 1; }
+table td { border-bottom: 1px solid #c1c1c1; }
+
+
+.form { display: flex; }
+.campo { padding: 10px; }
+.campo label { margin-right: 10px; }
