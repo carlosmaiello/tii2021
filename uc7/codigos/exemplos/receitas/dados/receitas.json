@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+		"dataCadastro": "2022-03-29T18:04:48.550Z",
+		"dataAtualizacao": "2022-03-29T18:04:48.550Z",
+		"nome": "Bolo de Fubá",
+		"tempo": "30 min",
+		"porcoes": "6",
+		"ingredientes": [
+			{
+				"ingrediente": "Farinha de Trigo",
+				"quantidade": "1 kg"
+			},
+			{
+				"ingrediente": "Fubá",
+				"quantidade": "1 kg"
+			},
+			{
+				"ingrediente": "Sal",
+				"quantidade": "5 gr"
+			}
+		],
+		"preparo": [
+			{
+				"seq": "1",
+				"desc": "Passo 1"
+			},
+			{
+				"seq": "2",
+				"desc": "Passo 2"
+			},
+			{
+				"seq": "3",
+				"desc": "Passo 3"
+			},
+			{
+				"seq": "4",
+				"desc": "Passo 4"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"dataCadastro": "2022-03-29T18:05:09.929Z",
+		"dataAtualizacao": "2022-03-29T18:05:09.929Z",
+		"nome": "Bolo de Fubá 2",
+		"tempo": "30 min",
+		"porcoes": "6",
+		"ingredientes": [
+			{
+				"ingrediente": "Farinha de Trigo",
+				"quantidade": "1 kg"
+			},
+			{
+				"ingrediente": "Fubá",
+				"quantidade": "1 kg"
+			},
+			{
+				"ingrediente": "Sal",
+				"quantidade": "5 gr"
+			}
+		],
+		"preparo": [
+			{
+				"seq": "1",
+				"desc": "Passo 1"
+			},
+			{
+				"seq": "2",
+				"desc": "Passo 2"
+			},
+			{
+				"seq": "3",
+				"desc": "Passo 3"
+			},
+			{
+				"seq": "4",
+				"desc": "Passo 4"
+			}
+		]
+	}
+]

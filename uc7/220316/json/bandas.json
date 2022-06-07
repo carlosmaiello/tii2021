@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "estilo": {
+      "id": 1,
+      "nome": "Rock"
+    },
+    "nome": "Paralamas do sucesso",
+    "desc": "Os Paralamas do Sucesso é uma banda de rock, formada no município fluminense de Seropédica, em 1982. Seus integrantes são: Herbert Vianna, Bi Ribeiro e João Barone. No início a banda misturava rock com reggae, posteriormente passaram a agregar instrumentos de sopro e ritmos latinos.",
+    "foto": "https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/a/b/2/f/ab2f3c79a99a172f5374fd48a92901a6.jpg"
+  },
+  {
+    "id": 2,
+    "estilo": {
+      "id": 1,
+      "nome": "Rock"
+    },
+    "nome": "Titãns",
+    "desc": "Titãs é uma banda de rock formada na cidade de São Paulo, Brasil em 1982. Embora originalmente tocassem pop-rock alternativo em seus primórdios, o grupo também já utilizou diversos outros gêneros ao longo de quase 40 anos de carreira, como new wave, punk rock, grunge, MPB e música eletrônica.",
+    "foto": "https://s2.glbimg.com/G_yqtoPRyVRsxSYWxGwDWCbZajU=/0x0:1600x1865/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/l/g/lScFGITSmERbFMAvMCng/titasacustico2020.jpg"
+  },
+  {
+    "id": 3,
+    "estilo": {
+      "id": 2,
+      "nome": "Sertanejo"
+    },
+    "nome": "Jorge & Mateus",
+    "desc": "Jorge & Mateus é uma dupla brasileira de música sertaneja, formada em Itumbiara em 2005 pelos cantores Jorge Barcelos e Mateus Liduário.",
+    "foto": "https://cdns-images.dzcdn.net/images/artist/c04510caa5343adf45b852be7fee8119/500x500.jpg"
+  },
+  {
+    "id": 4,
+    "estilo": {
+      "id": 2,
+      "nome": "Sertanejo"
+    },
+    "nome": "Maiara & Maraisa",
+    "desc": "Maiara & Maraísa é uma dupla sertaneja de cantoras, compositoras, multi-instrumentistas brasileiras e empresárias, formada pelas irmãs gêmeas Maiara Carla Henrique Pereira e Carla Maraísa Henrique Pereira. Ficaram conhecidas nacionalmente pelos hits \"10%\" e \"Medo Bobo\".",
+    "foto": "https://static1.purepeople.com.br/articles/8/26/55/68/@/3022466-maiara-e-maraisa-levam-tombo-no-palco-du-624x600-1.jpg"
+  },
+  {
+    "id": 4,
+    "estilo": {
+      "id": 3,
+      "nome": "Samba"
+    },
+    "nome": "Fundo de Quintal",
+    "desc": "Fundo de Quintal é um grupo de samba brasileiro formado no Rio de Janeiro na década de 1970. Surgido a partir das rodas de samba do bloco carnavalesco Cacique de Ramos, agremiação criada por Bira",
+    "foto": "https://www.vagalume.com.br/fundo-de-quintal/images/fundo-de-quintal.jpg"
+  },
+  {
+    "id": 5,
+    "estilo": {
+      "id": 3,
+      "nome": "Samba"
+    },
+    "nome": "Os Travessos",
+    "desc": "Os Travessos é um banda de pagode formado em 1996 na cidade de São Paulo. Originalmente teve como vocalista Rodriguinho entre 1996 e 2004, passando o posto para Fabinho Mello – que até então era tecladista da banda – entre 2004 e 2006, Filipe Duarte entre 2006 e 2020 e Uan desde 2020.",
+    "foto": "https://i.ytimg.com/vi/DcqU2AcbtSU/hqdefault.jpg"
+  },
+  {
+    "id": 6,
+    "estilo": {
+      "id": 3,
+      "nome": "Samba"
+    },
+    "nome": "Só Pra Contrariar",
+    "desc": "Só Pra Contrariar é um grupo musical brasileiro de samba formado em 1989 em Uberlândia, Minas Gerais. Tendo como principal cantor Alexandre Pires, o grupo despontou na década de 1990 e se tornou um dos mais populares da vertente pagode no país.",
+    "foto": "https://conteudo.imguol.com.br/blogs/137/files/2018/02/spc.jpg"
+  },
+  {
+    "id": 7,
+    "estilo": {
+      "id": 4,
+      "nome": "Forró"
+    },
+    "nome": "Cavaleiros do Forró",
+    "desc": "Cavaleiros do Forró é uma banda de forró eletrônico formada em novembro de 2001 na cidade de Natal, Rio Grande do Norte. Atualmente, tem como vocalistas: Jaílson Santos, Ramon Costa, e Kally Fonseca.",
+    "foto": "https://s2.glbimg.com/Qbs0t-I3IzPVDTpfMGzPPEyPAFk=/0x0:1000x864/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2018/S/Y/EJ61GgSwqkzmhPhLJpTQ/cavaleiros.jpg"
+  },
+  {
+    "id": 8,
+    "estilo": {
+      "id": 4,
+      "nome": "Forró"
+    },
+    "nome": "Aviões do Forró",
+    "desc": "O Aviões do Forró foi uma banda de forró eletrônico formada em Fortaleza, Ceará, no ano de 2002 e que encerrou suas atividades no ano de 2018. Atualmente, os ex-vocalistas Xand Avião e Solange Almeida se apresentam pelo Brasil em carreira solo.",
+    "foto": "https://veja.abril.com.br/wp-content/uploads/2016/10/brasil-avioes-do-forro-20161018-01.jpg"
+  },
+  {
+    "id": 9,
+    "estilo": {
+      "id": 4,
+      "nome": "Forró"
+    },
+    "nome": "Calcinha Preta",
+    "desc": "Calcinha Preta é uma banda de forró eletrônico, formada em 8 de dezembro de 1995 na cidade de Aracaju, pelo empresário e produtor musical Gilton Andrade. Atualmente, tem como vocalistas: Daniel Diau, Silvânia Aquino e Bell Oliver.",
+    "foto": "https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/3/0/0/4/3004f53f48849a584d318296a714ed8f.jpg"
+  }
+]

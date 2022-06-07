@@ -1,0 +1,167 @@
+[
+	{
+		"id": 3,
+		"dataCadastro": "2022-03-23T20:09:08.705Z",
+		"dataAtualizacao": "2022-03-23T20:09:08.705Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "http://localhost:3000/uploads/ca5c7e10db81eab8b60891d0b03148dd"
+	},
+	{
+		"id": 7,
+		"dataCadastro": "2022-03-23T20:09:11.001Z",
+		"dataAtualizacao": "2022-03-23T20:09:11.001Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": null,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://images-na.ssl-images-amazon.com/images/I/71ZLavBjpRL.jpg"
+	},
+	{
+		"id": 8,
+		"dataCadastro": "2022-03-29T16:50:32.149Z",
+		"dataAtualizacao": "2022-03-29T16:50:32.149Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://images-na.ssl-images-amazon.com/images/I/91Tb8yIdRML.jpg"
+	},
+	{
+		"id": 9,
+		"dataCadastro": "2022-03-29T16:55:27.708Z",
+		"dataAtualizacao": "2022-03-29T16:55:27.708Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/90/90/21/20119166.jpg"
+	},
+	{
+		"id": 10,
+		"dataCadastro": "2022-03-29T16:56:54.809Z",
+		"dataAtualizacao": "2022-03-29T16:56:54.809Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://images-na.ssl-images-amazon.com/images/I/71ZLavBjpRL.jpg"
+	},
+	{
+		"id": 11,
+		"dataCadastro": "2022-03-29T16:58:01.473Z",
+		"dataAtualizacao": "2022-03-29T16:58:01.473Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://images-na.ssl-images-amazon.com/images/I/91Tb8yIdRML.jpg"
+	},
+	{
+		"id": 12,
+		"dataCadastro": "2022-03-29T16:58:46.671Z",
+		"dataAtualizacao": "2022-03-29T16:58:46.671Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/90/90/21/20119166.jpg"
+	},
+	{
+		"id": 13,
+		"dataCadastro": "2022-03-29T16:59:30.859Z",
+		"dataAtualizacao": "2022-03-29T16:59:30.859Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://images-na.ssl-images-amazon.com/images/I/71ZLavBjpRL.jpg"
+	},
+	{
+		"id": 14,
+		"dataCadastro": "2022-03-29T17:01:45.545Z",
+		"dataAtualizacao": "2022-03-29T17:01:45.545Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://images-na.ssl-images-amazon.com/images/I/91Tb8yIdRML.jpg"
+	},
+	{
+		"id": 15,
+		"dataCadastro": "2022-03-29T17:01:55.129Z",
+		"dataAtualizacao": "2022-03-29T17:01:55.129Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/90/90/21/20119166.jpg"
+	},
+	{
+		"id": 16,
+		"dataCadastro": "2022-03-29T17:02:03.824Z",
+		"dataAtualizacao": "2022-03-29T17:02:03.824Z",
+		"nome": "Tudo ao mesmo tempo agora",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://images-na.ssl-images-amazon.com/images/I/71ZLavBjpRL.jpg"
+	},
+	{
+		"id": 17,
+		"dataCadastro": "2022-03-31T00:52:37.816Z",
+		"dataAtualizacao": "2022-03-31T00:52:37.816Z",
+		"nome": "Outro livro",
+		"autor_id": 1,
+		"sinopse": "Sinopse",
+		"ano": "1985",
+		"edicao": "1",
+		"capa": "https://images-na.ssl-images-amazon.com/images/I/91Tb8yIdRML.jpg"
+	},
+	{
+		"id": 22,
+		"dataCadastro": "2022-04-04T16:43:23.947Z",
+		"dataAtualizacao": "2022-04-04T16:43:23.947Z",
+		"nome": "Livro de Teste ",
+		"autor_id": null,
+		"sinopse": "rtert",
+		"ano": "1980",
+		"edicao": "1",
+		"capa": "https://images-na.ssl-images-amazon.com/images/I/91Tb8yIdRML.jpg"
+	},
+	{
+		"id": 25,
+		"dataCadastro": "2022-04-27T18:38:07.635Z",
+		"dataAtualizacao": "2022-04-27T18:38:07.635Z",
+		"nome": "123",
+		"autor_id": null,
+		"sinopse": "123",
+		"ano": "123",
+		"edicao": "123",
+		"capa": ""
+	},
+	{
+		"id": 26,
+		"dataCadastro": "2022-04-27T18:56:38.577Z",
+		"dataAtualizacao": "2022-04-27T18:56:38.577Z",
+		"nome": "teste",
+		"autor_id": 3,
+		"sinopse": "assdf",
+		"ano": "1234",
+		"edicao": "12",
+		"capa": ""
+	}
+]

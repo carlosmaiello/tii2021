@@ -1,0 +1,42 @@
+[
+	{
+		"id": 2,
+		"dataCadastro": "2022-03-29T17:02:03.827Z",
+		"dataAtualizacao": "2022-03-29T17:02:03.827Z",
+		"numero": "2",
+		"titulo": "Cap 2",
+		"livro_id": 16
+	},
+	{
+		"id": 3,
+		"dataCadastro": "2022-03-29T17:02:03.828Z",
+		"dataAtualizacao": "2022-03-29T17:02:03.828Z",
+		"numero": "3",
+		"titulo": "Cap 3",
+		"livro_id": 16
+	},
+	{
+		"id": 4,
+		"dataCadastro": "2022-03-31T00:52:37.818Z",
+		"dataAtualizacao": "2022-03-31T00:52:37.818Z",
+		"numero": "1",
+		"titulo": "Cap 1",
+		"livro_id": 17
+	},
+	{
+		"id": 5,
+		"dataCadastro": "2022-03-31T00:52:37.823Z",
+		"dataAtualizacao": "2022-03-31T00:52:37.823Z",
+		"numero": "2",
+		"titulo": "Cap 2",
+		"livro_id": 17
+	},
+	{
+		"id": 6,
+		"dataCadastro": "2022-03-31T00:52:37.825Z",
+		"dataAtualizacao": "2022-03-31T00:52:37.825Z",
+		"numero": "3",
+		"titulo": "Cap 3",
+		"livro_id": 17
+	}
+]
