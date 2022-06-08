@@ -67,10 +67,12 @@ const mysql = require('mysql-await');
             const id = prompt("Número curso que deseja alterar: ");
             const res = await conexao.awaitQuery("select nome, area_id from cursos where id = ?", [id]);
 
-            if (res[0]) {
+            const curso = res[0];
+
+            if (curso) {
                 console.log("Digite os dados que deseja alterar:");
-                const nome = prompt(`nome (${res[0].nome}): `, res[0].nome);
-                const area_id = prompt(`area_id (${res[0].area_id}): `, res[0].area_id);
+                const nome = prompt(`nome (${curso.nome}): `, curso.nome);
+                const area_id = prompt(`area_id (${curso.area_id}): `, curso.area_id);
 
                 const sn = prompt("Confirma a alteração deste curso? (s/n) ");
                 if (sn == "s" || sn == "S") {
