@@ -89,15 +89,15 @@ values
     (2, 'Saúde'),
     (3, 'Gestão e Negócios');
 
-insert into cursos (id, nome, area_id) 
+insert into cursos (id, nome, area_id, preco) 
 values 
-    (1, 'Técnico em Informática', 1),
-    (2, 'Técnico em Informática para Internet', 1),
-    (3, 'Técnico em Farmácia', 2),
-    (4, 'Técnico em Enfermagem', 2),
-    (5, 'Técnico em Administração', 3),
-    (6, 'Teste', 3),
-    (7, 'Teste 2', 3);
+    (1, 'Técnico em Informática', 1, 100),
+    (2, 'Técnico em Informática para Internet', 1, 500),
+    (3, 'Técnico em Farmácia', 2, 400),
+    (4, 'Técnico em Enfermagem', 2, 300),
+    (5, 'Técnico em Administração', 3, 200),
+    (6, 'Teste', 3, 100),
+    (7, 'Teste 2', 3, 200);
 
 
 update cursos 
