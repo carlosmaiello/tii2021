@@ -5,7 +5,7 @@ const sequelize = new Sequelize("escola_seq", "root", "", {
     dialect: "mysql"
 });
 
-const Area = sequelize.define('Area', {
+const Area = sequelize.define('area', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -14,9 +14,9 @@ const Area = sequelize.define('Area', {
     nome: {
         type: DataTypes.STRING(50)
     }
-}, {});
+});
 
-const Aluno = sequelize.define("Aluno", {
+const Aluno = sequelize.define("aluno", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -53,9 +53,9 @@ const Aluno = sequelize.define("Aluno", {
         type: DataTypes.BOOLEAN,
         defaultValue: true
     }
-}, {});
+});
 
-const Curso = sequelize.define("Curso", {
+const Curso = sequelize.define("curso", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -76,9 +76,9 @@ const Curso = sequelize.define("Curso", {
         type: DataTypes.DECIMAL(10,2),
         defaultValue: 0
     }
-}, {});
+});
 
-const Turma = sequelize.define("Turma", {
+const Turma = sequelize.define("turma", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -92,9 +92,9 @@ const Turma = sequelize.define("Turma", {
         type: DataTypes.DATEONLY,
         allowNull: true
     },
-}, {});
+});
 
-const Endereco = sequelize.define("Endereco", {
+const Endereco = sequelize.define("endereco", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -122,9 +122,9 @@ const Endereco = sequelize.define("Endereco", {
     estado: {
         type: DataTypes.STRING(2)
     }
-}, {});
+});
 
-const TurmaAluno = sequelize.define("TurmaAluno", {
+const TurmaAluno = sequelize.define("turmaAluno", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -133,16 +133,16 @@ const TurmaAluno = sequelize.define("TurmaAluno", {
     num: {
         type: DataTypes.INTEGER
     }
-}, {});
+});
 
-Area.hasMany(Curso);
-Curso.belongsTo(Area);
+Area.Cursos = Area.hasMany(Curso);
+Curso.Area = Curso.belongsTo(Area);
 
-Curso.hasMany(Turma);
-Turma.belongsTo(Curso);
+Curso.Turmas = Curso.hasMany(Turma);
+Turma.Curso = Turma.belongsTo(Curso);
 
-Endereco.hasOne(Aluno);
-Aluno.belongsTo(Endereco);
+Aluno.Endereco = Aluno.belongsTo(Endereco);
+Endereco.Aluno = Endereco.hasOne(Aluno);
 
 Turma.belongsToMany(Aluno, { through: TurmaAluno });
 Aluno.belongsToMany(Turma, { through: TurmaAluno });

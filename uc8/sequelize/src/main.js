@@ -9,12 +9,26 @@ const { sequelize, Area, Aluno } = require('./models');
         { nome: 'Bem-estar' }
     ]);
 
-    await Aluno.bulkCreate([
-        { nome: "Zezinho da Silva" },
-        { nome: "Mariazinha de Souza" },
-        { nome: "Marcia Rezende" },
-        { nome: "Felipe de Souza" },
-    ]);
+    await Aluno.bulkCreate(
+        [
+            {
+                nome: "Zezinho da Silva",
+                endereco: {
+                    logradouro: "Rua teste",
+                    numero: "123",
+                    bairro: "Centro",
+                    cep: "12345-678",
+                    cidade: "Bauru",
+                    estado: "SP"
+                }
+            },
+            { nome: "Mariazinha de Souza", },
+            { nome: "Marcia Rezende", },
+            { nome: "Felipe de Souza", },
+        ],
+        {
+            include: [Aluno.Endereco]
+        });
 
     /**
      * Consultando todos
