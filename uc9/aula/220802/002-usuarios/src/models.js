@@ -9,9 +9,29 @@ const Usuario = sequelize.define('usuario', {
         autoIncrement: true,
         primaryKey: true
     },
-    nome: DataTypes.STRING,
-    email: DataTypes.STRING,
-    senha: DataTypes.STRING
+    nome: { 
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        }
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+            isEmail: true,
+        }
+    },
+    senha: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+            notContains: ' ',
+        }
+    }
 });
 
 module.exports = { sequelize, Usuario }

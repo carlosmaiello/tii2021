@@ -18,12 +18,12 @@ describe("Usuários", () => {
      */
 
     beforeAll(async () => {
-        await sequelize.sync({ logging: true });
+        await sequelize.sync({ logging: false });
     });
 
-    // beforeEach(async () => {
-    //     await Usuario.truncate();
-    // });
+    beforeEach(async () => {
+        await Usuario.truncate();
+    });
 
     test("Usuário com todos os dados válidos", async () => {
         const usuario = await Usuario.create({
@@ -45,32 +45,92 @@ describe("Usuários", () => {
     });
 
     test("Usuário sem nome", async () => {
-        const usuario = await Usuario.create({
+        await expect(Usuario.create({
             email: "jose@gmail.com",
             senha: "123"
-        });
+        })).rejects.toThrow();
 
-        expect(usuario).toBeNull();
-        expect(usuario.id).toBe(0);
+        await expect(Usuario.create({
+            nome: '',
+            email: "jose@gmail.com",
+            senha: "123"
+        })).rejects.toThrow();
+
+        await expect(Usuario.create({
+            nome: '   ',
+            email: "jose@gmail.com",
+            senha: "123"
+        })).rejects.toThrow();
     });
 
     test("Usuário sem email", async () => {
-        const usuario = await Usuario.create({
+        await expect(Usuario.create({
             nome: "Zézinho da Silva",
             senha: "123"
-        });
+        })).rejects.toThrow();
 
-        expect(usuario).toBeNull();
-        expect(usuario.id).toBe(0);
+        await expect(Usuario.create({
+            nome: "Zézinho da Silva",
+            email: '',
+            senha: "123"
+        })).rejects.toThrow();
+
+         await expect(Usuario.create({
+            nome: "Zézinho da Silva",
+            email: '   ',
+            senha: "123"
+        })).rejects.toThrow();
+    });
+
+    test("Email inválido", async () => {
+        await expect(Usuario.create({
+            nome: "Zézinho da Silva",
+            email: 'aaa.com',
+            senha: "123"
+        })).rejects.toThrow();
+
+        await expect(Usuario.create({
+            nome: "Zézinho da Silva",
+            email: '@aaa.com',
+            senha: "123"
+        })).rejects.toThrow();
+
+
+        await expect(Usuario.create({
+            nome: "Zézinho da Silva",
+            email: '@aaa com',
+            senha: "123"
+        })).rejects.toThrow();
+
+        await expect(Usuario.create({
+            nome: "Zézinho da Silva",
+            email: 'aa aaa.com',
+            senha: "123"
+        })).rejects.toThrow();
     });
 
     test("Usuário sem senha", async () => {
-        const usuario = await Usuario.create({
+        await expect(Usuario.create({
             nome: "Zézinho da Silva",
             email: "jose@gmail.com",
-        });
+        })).rejects.toThrow();
 
-        expect(usuario).toBeNull();
-        expect(usuario.id).toBe(0);
+        await expect(Usuario.create({
+            nome: "Zézinho da Silva",
+            email: "jose@gmail.com",
+            senha: '',
+        })).rejects.toThrow();
+
+        await expect(Usuario.create({
+            nome: "Zézinho da Silva",
+            email: "jose@gmail.com",
+            senha: '  ',
+        })).rejects.toThrow();
+
+        await expect(Usuario.create({
+            nome: "Zézinho da Silva",
+            email: "jose@gmail.com",
+            senha: 'a b',
+        })).rejects.toThrow();
     });
 });
