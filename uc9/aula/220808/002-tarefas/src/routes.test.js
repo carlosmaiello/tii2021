@@ -51,11 +51,7 @@ describe("Rota Usuários", () => {
             })
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
-            .expect(500)
-            .end(function (err, res) {
-                if (err) return done(err);
-                return done();
-            });
+            .expect(500, done);
     });
 
     test("POST /usuarios - usuário sem nome", (done) => {
@@ -67,10 +63,6 @@ describe("Rota Usuários", () => {
             })
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
-            .expect(500)
-            .end(function (err, res) {
-                if (err) return done(err);
-                return done();
-            });
+            .expect(500, done);
     });
 });
