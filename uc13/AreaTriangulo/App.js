@@ -8,11 +8,12 @@ export default function App() {
   const [resultado, setResultado] = React.useState();
 
   const calcular = () => {
-    const r = (base * altura)/2;
+    const r = (base * altura) / 2;
     setResultado(r);
   }
 
   return (
+    <SafeAreaView>
       <View style={styles.container}>
         <StatusBar style="auto" />
         <Text style={styles.titulo}>Área do triângulo</Text>
@@ -27,12 +28,13 @@ export default function App() {
             <TextInput style={styles.input} placeholder="Digite um valor" value={altura} onChangeText={setAltura} />
           </View>
         </View>
-        <Button title="Calcular" onPress={() => calcular()}/>
+        <Button title="Calcular" onPress={() => calcular()} />
         <View style={{ marginTop: 40 }}>
           <Text style={styles.subTitulo}>Resultado:</Text>
           <Text style={styles.resultado}>{resultado}</Text>
         </View>
       </View>
+    </SafeAreaView>
   );
 }
 
