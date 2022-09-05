@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: "bold",
+    marginTop: 20,
     marginBottom: 20
   },
   containerInput: {
@@ -100,7 +101,8 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    padding: 10
+    padding: 10,
+    textAlign: "right"
   },
   titleResult: {
     fontSize: 20
