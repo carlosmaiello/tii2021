@@ -17,13 +17,11 @@ export default function App() {
       <Text style={styles.titulo}>Área do Retângulo</Text>
       <View style={styles.inputView}>
         <Text style={styles.inputLabel}>Base:</Text>
-        <TextInput style={styles.input} value={base} 
-        onChangeText={setBase} />
+        <TextInput style={styles.input} value={base} onChangeText={setBase} placeholder="Digite um valor" />
       </View>
       <View style={styles.inputView}>
         <Text style={styles.inputLabel}>Altura:</Text>
-        <TextInput style={styles.input} value={altura} 
-        onChangeText={setAltura} />
+        <TextInput style={styles.input} value={altura} onChangeText={setAltura} placeholder="Digite um valor" />
       </View>
       <Button title="Calcular" style={styles.botao} 
       onPress={() => calcular()} />
