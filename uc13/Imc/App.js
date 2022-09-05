@@ -1,6 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Button, SafeAreaView } from 'react-native';
+import { TextInputMask } from 'react-native-masked-text'
 
 export default function App() {
   const [peso, setPeso] = React.useState();
@@ -10,7 +11,10 @@ export default function App() {
   const [cor, setCor] = React.useState("white");
 
   const calcular = () => {
-    const res = peso / (altura * altura);
+    const p = peso.replace(".", "").replace(",", "."); // 85,50 => 85.50
+    const a = altura.replace(".", "").replace(",", "."); // 1,70  => 1.70
+
+    const res = p / (a * a);
     setImc(res.toFixed(2));
 
     if (res < 18.5) {
@@ -35,33 +39,48 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Calcule seu IMC</Text>
-      <View style={{ flexDirection: "row" }}>
+    <SafeAreaView>
+      <View style={styles.container}>
 
-        <View style={styles.containerInput}>
-          <Text>Peso</Text>
-          <TextInput style={styles.input} placeholder="Digite o valor" value={peso} onChangeText={setPeso} />
+        <Text style={styles.title}>Calcule seu IMC</Text>
+        <View style={{ flexDirection: "row" }}>
+
+          <View style={styles.containerInput}>
+            <Text>Peso</Text>
+            <TextInputMask type={'money'} options={{
+              precision: 2,
+              separator: ',',
+              delimiter: '',
+              unit: '',
+              suffixUnit: ''
+            }} style={styles.input} placeholder="Digite o valor" value={peso} onChangeText={setPeso} />
+          </View>
+
+          <View style={[styles.containerInput, { marginLeft: 10 }]}>
+            <Text>Altura</Text>
+            <TextInputMask type={'money'} options={{
+              precision: 2,
+              separator: ',',
+              delimiter: '',
+              unit: '',
+              suffixUnit: ''
+            }} style={styles.input} placeholder="Digite o valor" value={altura} onChangeText={setAltura} />
+          </View>
+
+        </View>
+        <View style={{ marginTop: 20, marginBottom: 20 }}>
+          <Button title="Calcular" onPress={() => calcular()} />
         </View>
 
-        <View style={[styles.containerInput, { marginLeft: 10 }]}>
-          <Text>Altura</Text>
-          <TextInput style={styles.input} placeholder="Digite o valor" value={altura} onChangeText={setAltura} />
+        <View>
+          <Text style={styles.titleResult}>Resultado:</Text>
+          <Text style={styles.textResult}>{imc}</Text>
+          <Text style={[styles.textResult, { backgroundColor: cor, padding: 5 }]}>{msg}</Text>
         </View>
 
+        <StatusBar style="auto" />
       </View>
-      <View style={{ marginTop: 20, marginBottom: 20 }}>
-        <Button title="Calcular" onPress={() => calcular()} />
-      </View>
-
-      <View>
-        <Text style={styles.titleResult}>Resultado:</Text>
-        <Text style={styles.textResult}>{imc}</Text>
-        <Text style={[styles.textResult, { backgroundColor: cor, padding: 5}]}>{msg}</Text>
-      </View>
-
-      <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
