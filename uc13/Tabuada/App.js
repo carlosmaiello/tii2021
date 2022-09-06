@@ -1,19 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View, StatusBar, Button } from 'react-native';
+import { StyleSheet, Text, TextInput, View, StatusBar } from 'react-native';
 
 export default function App() {
   const [mult, setMult] = React.useState(10);
-
-  const [multiplicador, setMultiplicador] = React.useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
-
-
-  const [nome, setNome] = React.useState();
-  const [nomes, setNomes] = React.useState(["José", "Felipe", "Marcos", "João", "Maria"]);
-
-  const adicionarNome = () => {
-    nomes.push(nome);
-    setNome('');
-  }
+  const multiplicador = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
   return (
     <View style={styles.container}>
@@ -30,14 +20,6 @@ export default function App() {
             <Text style={styles.linhaText}>{mult * v}</Text>
           </View>
         ))}
-      </View>
-
-      <View style={styles.bloco}>
-        <View style={{flexDirection: "row"}}>
-          <TextInput placeholder='Digite o nome' style={styles.input} value={nome} onChangeText={setNome} />
-          <Button title="Adicionar" onPress={() => adicionarNome()}/>
-        </View>
-        {nomes.map((n) => <Text style={{ fontSize: 20 }}>{n}</Text>)}
       </View>
 
       <View style={styles.bloco}>
