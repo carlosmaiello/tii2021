@@ -1,6 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, Button, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Button, SafeAreaView, StatusBar } from 'react-native';
 
 export default function App() {
   const [base, setBase] = React.useState();
@@ -13,9 +12,8 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
-        <StatusBar style="auto" />
         <Text style={styles.titulo}>Área do triângulo</Text>
         <View style={{ flexDirection: "row", marginTop: 40, marginBottom: 40 }}>
           <View style={{ flex: 1 }}>
@@ -34,6 +32,7 @@ export default function App() {
           <Text style={styles.resultado}>{resultado}</Text>
         </View>
       </View>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
