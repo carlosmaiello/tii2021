@@ -1,6 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, Button, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Button, SafeAreaView, StatusBar } from 'react-native';
 import { TextInputMask } from 'react-native-masked-text'
 
 export default function App() {
