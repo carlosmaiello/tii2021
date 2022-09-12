@@ -2,11 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View, StatusBar, Button, TextInput } from 'react-native';
 
 export default function App() {
-  const [nome, setNome] = React.useState();
-  const [nomes, setNomes] = React.useState(["José", "Felipe", "Marcos", "João", "Maria"]);
+  const [nome, setNome] = React.useState("");
+  const [nomes, setNomes] = React.useState(["José", "Felipe", "Marcos",
+    "João", "Maria"]);
 
   const adicionarNome = () => {
-    nomes.push(nome);
+    setNomes([...nomes, nome]);
     setNome('');
   }
 
@@ -16,10 +17,16 @@ export default function App() {
 
       <View style={styles.bloco}>
         <View style={{ flexDirection: "row" }}>
-          <TextInput placeholder='Digite o nome' style={styles.input} value={nome} onChangeText={setNome} />
+          <TextInput placeholder='Digite o nome'
+            style={styles.input} value={nome} onChangeText={setNome} />
           <Button title="Adicionar" onPress={() => adicionarNome()} />
         </View>
-        {nomes.map((n) => <Text style={{ fontSize: 20 }}>{n}</Text>)}
+        {nomes.map((n) => (
+          <View style={{ flexDirection: "row", paddingTop: 20 }}>
+            <Text style={{ fontSize: 20, flex: 1 }}>{n}</Text>
+            <Button title="X" color="red" />
+          </View>
+        ))}
       </View>
 
       <StatusBar style="auto" />
