@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View, StatusBar, SafeAreaView } from 'react-native';
 
 function PaginaTitulo(props) {
   return (
@@ -93,11 +92,11 @@ export default function App() {
     }
   ]);
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <PaginaTitulo titulo="Notícias" />
       <NoticiaLista noticias={noticias} />
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
