@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 function PaginaTitulo(props) {
   return (
@@ -12,16 +12,18 @@ function PaginaTitulo(props) {
 
 function NoticiaLista(props) {
   return (
-    <View>
+    <ScrollView style={{padding: 10, flex: 1}}>
       {props.noticias.map((n) => <NoticiaListaItem imagem={n.imagem} titulo={n.titulo} />)}
-    </View>
+    </ScrollView>
   )
 }
 
 function NoticiaListaItem(props) {
   return (
-    <View style={{flexDirection: "row"}}>
-      <NoticiaImagem imagem={props.imagem} />
+    <View style={{flexDirection: "row", marginBottom: 10, borderBottomWidth: 1, borderColor: "#eee", paddingBottom: 10}}>
+      <View style={{ marginRight: 20 }}>
+        <NoticiaImagem imagem={props.imagem} />
+      </View>
       <NoticiaTitulo titulo={props.titulo} />
     </View>
   )
@@ -40,6 +42,38 @@ export default function App() {
     {
       imagem: require("./assets/android.png"),
       titulo:"Android Pay? Google pode lançar sistema mobile de pagamentos em 2015"
+    },
+    {
+      imagem: require("./assets/icon.png"),
+      titulo: "Android Pay? Google pode lançar sistema mobile de pagamentos em 2015"
+    },
+    {
+      imagem: require("./assets/android.png"),
+      titulo: "Android Pay? Google pode lançar sistema mobile de pagamentos em 2015"
+    },
+    {
+      imagem: require("./assets/icon.png"),
+      titulo: "Android Pay? Google pode lançar sistema mobile de pagamentos em 2015"
+    },
+    {
+      imagem: require("./assets/android.png"),
+      titulo: "Android Pay? Google pode lançar sistema mobile de pagamentos em 2015"
+    },
+    {
+      imagem: require("./assets/icon.png"),
+      titulo: "Android Pay? Google pode lançar sistema mobile de pagamentos em 2015"
+    },
+    {
+      imagem: require("./assets/android.png"),
+      titulo: "Android Pay? Google pode lançar sistema mobile de pagamentos em 2015"
+    },
+    {
+      imagem: require("./assets/icon.png"),
+      titulo: "Android Pay? Google pode lançar sistema mobile de pagamentos em 2015"
+    },
+    {
+      imagem: require("./assets/android.png"),
+      titulo: "Android Pay? Google pode lançar sistema mobile de pagamentos em 2015"
     },
     {
       imagem: require("./assets/icon.png"),
