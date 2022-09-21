@@ -6,7 +6,7 @@ export default function Header(props) {
         <View style={styles.container}>
             <PageTitle title={props.title} />
             <View>
-                {props.content}
+                {props.children}
             </View>
         </View>
     )
