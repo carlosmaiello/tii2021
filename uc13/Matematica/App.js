@@ -5,7 +5,7 @@ import DivisivelPage from './src/pages/DivisivelPage';
 import MmcPage from './src/pages/MmcPage';
 
 export default function App() {
-  const [page, setPage] = React.useState("divisivel");
+  const [page, setPage] = React.useState("mmc");
 
   const menus = [
     {
