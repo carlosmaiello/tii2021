@@ -1,28 +1,14 @@
+import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import Form from "../components/Form";
 import Lista from "../components/Lista";
 import Titulo from "../components/Titulo";
 
 export default function LancarNotasPage() {
-    const notas = [
-        {
-            nome: "José",
-            n1: 8,
-            n2: 8,
-            n3: 8,
-            n4: 8,
-            media: 8
-        },
-        {
-            nome: "Maria",
-            n1: 6,
-            n2: 8,
-            n3: 10,
-            n4: 8,
-            media: 8
-        }
-    ];
-    const adicionar = (aluno) => { }
+    const [notas, setNotas] = React.useState([]);
+    const adicionar = (aluno) => {
+        setNotas([...notas, aluno]);
+     }
     return (
         <View style={styles.container}>
             <Titulo texto="Lançar Notas" />
