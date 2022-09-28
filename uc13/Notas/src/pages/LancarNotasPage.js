@@ -1,18 +1,18 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { AppContext } from "../../App";
 import Form from "../components/Form";
 import Lista from "../components/Lista";
 import Titulo from "../components/Titulo";
 
 export default function LancarNotasPage() {
-    const [notas, setNotas] = React.useState([]);
-    const adicionar = (aluno) => {
-        setNotas([...notas, aluno]);
-     }
+
+    const { notas, adicionarNota } = React.useContext(AppContext);
+
     return (
         <View style={styles.container}>
             <Titulo texto="Lançar Notas" />
-            <Form onAdicionar={adicionar} />
+            <Form onAdicionar={adicionarNota} />
             <ScrollView style={styles.listaContainer}>
                 <Lista items={notas} />
             </ScrollView>
