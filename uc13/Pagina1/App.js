@@ -4,6 +4,7 @@ import Footer from './src/components/Footer';
 import Header from './src/components/Header';
 import { AuthProvider } from './src/contexts/Auth';
 import HomePage from './src/pages/HomePage';
+import LoginPage from './src/pages/LoginPage';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Footer />
         <StatusBar style="auto" />
       </View>
+      {/* <LoginPage /> */}
     </AuthProvider>
   );
 }
