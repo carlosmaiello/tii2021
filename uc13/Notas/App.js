@@ -1,23 +1,17 @@
 import React from 'react';
 import { StyleSheet, View, StatusBar } from 'react-native';
+import { NotasProvider } from './src/contexts/Notas';
 import LancarNotasPage from './src/pages/LancarNotasPage';
-
-export const AppContext = React.createContext();
 
 export default function App() {
 
-  const [notas, setNotas] = React.useState([]);
-  const adicionarNota = (nota) => {
-    setNotas([...notas, nota]);
-  }
-
   return (
-    <AppContext.Provider value={{ notas, adicionarNota }}>
+    <NotasProvider>
       <View style={styles.container}>
         <LancarNotasPage />
         <StatusBar style="auto" />
       </View>
-    </AppContext.Provider>
+    </NotasProvider>
   );
 }
 

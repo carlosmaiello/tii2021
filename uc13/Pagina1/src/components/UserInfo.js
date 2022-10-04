@@ -15,7 +15,7 @@ export default function UserInfo() {
             {!authorized && (
                 <View style={{ flexDirection: "row" }}>
                     <Button title="Entrar" onPress={() => login("a@a.com", "123")} />
-                    ou
+                    <Text>ou</Text>
                     <Button title="Registrar" />
                 </View>
             )}
