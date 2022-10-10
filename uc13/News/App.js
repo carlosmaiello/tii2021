@@ -1,41 +1,21 @@
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import SettingsPage from './src/pages/SettingsPage';
-import LoginPage from './src/pages/LoginPage';
-import NewsDetailPage from './src/pages/NewsDetailPage';
-import NewsPage from './src/pages/NewsPage';
-import RegisterPage from './src/pages/RegisterPage';
-
-const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
-
-function Home() {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="News" component={NewsPage} />
-      <Tab.Screen name="Settings" component={SettingsPage} />
-    </Tab.Navigator>
-  );
-}
+import { StyleSheet } from 'react-native';
+import { AuthContext, AuthProvider } from './src/contexts/Auth';
+import AppRoutes from './src/AppRoutes';
 
 
 export default function App() {
+
   return (
-    <>
+    <AuthProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Home'>
-          <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
-          <Stack.Screen name="NewsDetail" component={NewsDetailPage} />
-          <Stack.Screen name="Login" component={LoginPage} options={{ headerShown: false }} />
-          <Stack.Screen name="Register" component={RegisterPage} options={{ headerShown: false }} />
-        </Stack.Navigator>
+        <AppRoutes />
       </NavigationContainer>
       <StatusBar style="auto" />
-    </>
+    </AuthProvider>
   );
 }
 
