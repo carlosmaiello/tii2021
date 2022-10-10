@@ -14,8 +14,10 @@ export const AuthProvider = ({ children }) => {
                 name: "Joselito"
             })
         }
-        else
+        else {
             setUser(null);
+            throw new Error("Usuário ou senha inválidos!");
+        }
     }
 
     const logout = () => {
