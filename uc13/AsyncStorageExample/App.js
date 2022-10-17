@@ -1,17 +1,47 @@
 import { StatusBar } from 'expo-status-bar';
+import React, { useEffect } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function App() {
+  const [valor, setValor] = React.useState();
+  const [valorDigitado, setValorDigitado] = React.useState();
+
+  const gravar = async () => {
+    try {
+      await AsyncStorage.setItem("chave", valorDigitado);
+      setValorDigitado('');
+      setValor(valorDigitado);
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
+
+  const consultar = async () => {
+    try {
+      const v = await AsyncStorage.getItem("chave");
+      setValor(v);
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    consultar();
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Armazenando dados no Aparelho</Text>
       <View style={styles.box}>
         <Text>Valor armazenado:</Text>
-        <Text style={styles.highlight}>Alguma coisa</Text>
+        <Text style={styles.highlight}>{valor}</Text>
       </View>
       <View style={styles.box}>
-        <TextInput placeholder='Informe o valor:' style={styles.input}/>
-        <TouchableOpacity>
+        <TextInput placeholder='Informe o valor:' style={styles.input} value={valorDigitado} onChangeText={setValorDigitado}/>
+        <TouchableOpacity onPress={gravar}>
             <Text style={styles.btn}>Gravar</Text>
         </TouchableOpacity>
       </View>
