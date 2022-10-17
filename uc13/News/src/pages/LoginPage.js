@@ -7,8 +7,8 @@ import { AuthContext } from "../contexts/Auth";
 export default function LoginPage() {
     const navigation = useNavigation();
 
-    const [email, setEmail] = React.useState("");
-    const [password, setPassword] = React.useState("");
+    const [email, setEmail] = React.useState("a@a.com");
+    const [password, setPassword] = React.useState("123");
 
     const [erro, setErro] = React.useState(null);
 
@@ -28,11 +28,11 @@ export default function LoginPage() {
     return (
         <View style={globalStyles.container}>
             <Text>Login</Text>
-            <TextInput placeholder="Email" value={email} onChangeText={setEmail}/>
-            <TextInput placeholder="Senha" value={password} onChangeText={setPassword} />
+            <TextInput style={globalStyles.input} placeholder="Email" value={email} onChangeText={setEmail}/>
+            <TextInput style={globalStyles.input} placeholder="Senha" value={password} onChangeText={setPassword} />
             {erro && (<Text>{erro}</Text>)}
-            <Button title="Entrar" onPress={() => loginHandle()}/>
-            <Button title="Registrar" onPress={() => navigation.navigate("Register")} />
+            <Button style={globalStyles.button} title="Entrar" onPress={() => loginHandle()}/>
+            <Button style={globalStyles.button} title="Registrar" onPress={() => navigation.navigate("Register")} />
         </View>
     )
 }

@@ -5,16 +5,19 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
 import { AuthContext, AuthProvider } from './src/contexts/Auth';
 import AppRoutes from './src/AppRoutes';
+import { NewsProvider } from './src/contexts/News';
 
 
 export default function App() {
 
   return (
     <AuthProvider>
-      <NavigationContainer>
-        <AppRoutes />
-      </NavigationContainer>
-      <StatusBar style="auto" />
+      <NewsProvider>
+        <NavigationContainer>
+          <AppRoutes />
+        </NavigationContainer>
+        <StatusBar style="auto" />
+      </NewsProvider>
     </AuthProvider>
   );
 }
@@ -26,4 +29,14 @@ export const globalStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  input: {
+    borderWidth: 1,
+    padding: 10,
+    marginTop: 5,
+    marginBottom: 5,
+  },
+  button: {
+    marginTop: 5,
+    marginBottom: 5,
+  }
 });
