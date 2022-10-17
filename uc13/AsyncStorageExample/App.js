@@ -4,14 +4,15 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-nativ
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function App() {
-  const [valor, setValor] = React.useState();
+  const [valor, setValor] = React.useState([]);
   const [valorDigitado, setValorDigitado] = React.useState();
 
   const gravar = async () => {
     try {
-      await AsyncStorage.setItem("chave", valorDigitado);
+      const temp = [...valor, valorDigitado];
+      await AsyncStorage.setItem("chave1", JSON.stringify(temp));
       setValorDigitado('');
-      setValor(valorDigitado);
+      setValor(temp);
     }
     catch (err) {
       console.log(err);
@@ -20,8 +21,9 @@ export default function App() {
 
   const consultar = async () => {
     try {
-      const v = await AsyncStorage.getItem("chave");
-      setValor(v);
+      const v = await AsyncStorage.getItem("chave1");
+      const temp = v != null ? JSON.parse(v) : [];
+      setValor(temp);
     }
     catch (err) {
       console.log(err);
@@ -37,12 +39,20 @@ export default function App() {
       <Text style={styles.title}>Armazenando dados no Aparelho</Text>
       <View style={styles.box}>
         <Text>Valor armazenado:</Text>
-        <Text style={styles.highlight}>{valor}</Text>
+        <Text style={styles.highlight}>
+          <Text> - </Text>
+          {valor.map((v) => (
+            <>
+              <Text>{v}</Text>
+              <Text> - </Text>
+            </>
+          ))}
+        </Text>
       </View>
       <View style={styles.box}>
-        <TextInput placeholder='Informe o valor:' style={styles.input} value={valorDigitado} onChangeText={setValorDigitado}/>
+        <TextInput placeholder='Informe o valor:' style={styles.input} value={valorDigitado} onChangeText={setValorDigitado} />
         <TouchableOpacity onPress={gravar}>
-            <Text style={styles.btn}>Gravar</Text>
+          <Text style={styles.btn}>Gravar</Text>
         </TouchableOpacity>
       </View>
       <StatusBar style="auto" />
@@ -70,7 +80,7 @@ const styles = StyleSheet.create({
   },
   box: {
     marginBottom: 20,
-    marginTop: 20,    
+    marginTop: 20,
     borderWidth: 1,
     padding: 10,
   },
