@@ -1,5 +1,5 @@
 {
-  "name": "pagina1",
+  "name": "asyncstorageexample",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "@expo/webpack-config": "^0.17.0",
     "@react-native-async-storage/async-storage": "~1.17.3",
-    "expo": "~46.0.13",
+    "expo": "~46.0.16",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
