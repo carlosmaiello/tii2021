@@ -27,17 +27,21 @@ export default function AppRoutes() {
 
     return (
         <Stack.Navigator initialRouteName='Home'>
-            {authorized ? (
-                <>
-                    <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
-                    <Stack.Screen name="NewsDetail" component={NewsDetailPage} />
-                </>
-            ) : (
-                <>
-                    <Stack.Screen name="Login" component={LoginPage} options={{ headerShown: false }} />
-                    <Stack.Screen name="Register" component={RegisterPage} options={{ headerShown: false }} />
-                </>
-            )}
+            <Stack.Group>
+                {authorized ? (
+                    <>
+                        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+                    </>
+                ) : (
+                    <>
+                        <Stack.Screen name="Login" component={LoginPage} options={{ headerShown: false }} />
+                        <Stack.Screen name="Register" component={RegisterPage} options={{ headerShown: false }} />
+                    </>
+                )}
+            </Stack.Group>
+            <Stack.Group screenOptions={{ presentation: 'transparentModal', headerShown: false }}>
+                <Stack.Screen name="NewsDetail" component={NewsDetailPage} />
+            </Stack.Group>
         </Stack.Navigator>
     )
 }

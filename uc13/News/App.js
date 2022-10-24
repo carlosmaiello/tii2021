@@ -29,6 +29,17 @@ export const globalStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  modalContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  modalContent: {
+    backgroundColor: '#fff',
+    padding: 20,
+    width: "80%"
+  },
   input: {
     borderWidth: 1,
     padding: 10,

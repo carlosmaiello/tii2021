@@ -33,14 +33,16 @@ export const NewsProvider = ({ children }) => {
             ])
         }
     }
+    
+    const getNews = (id) => {
+        setNews(newsList.find((news) => news.id == id));
+    }
+
     // const createNews = ({ title, subject, content, image }) => {
     //     setNewsList([...newsList, { title, subject, content, image}])
     //  }
     // const updateNews = ({id, title, content, image}) => { }
     // const removeNews = (id) => { }
-    const getNews = (id) => {
-        setNews(newsList.find((news) => news.id == id));
-    }
 
     return (
         <NewsContext.Provider value={{ newsList, news, listNews, getNews }}>
