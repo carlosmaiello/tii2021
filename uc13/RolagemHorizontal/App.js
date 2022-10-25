@@ -1,4 +1,5 @@
-import { ScrollView, StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
+import { StatusBar } from 'expo';
+import { ScrollView, StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 const Caixa = ({ texto }) => {
   return (
@@ -25,8 +26,8 @@ export default function App() {
             <Caixa texto="Caixa 8" />
           </ScrollView>
         </View>
-        <StatusBar style="auto" />
       </View >
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }

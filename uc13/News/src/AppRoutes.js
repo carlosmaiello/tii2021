@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginPage from "./pages/LoginPage";
@@ -11,9 +11,16 @@ import NewsDetailPage from "./pages/NewsDetailPage";
 const Tab = createBottomTabNavigator();
 
 function Home() {
+    const { user } = useContext(AuthContext);
+    
     return (
         <Tab.Navigator>
             <Tab.Screen name="News" component={NewsPage} />
+            {user.role == "editor" && (
+                <>
+                    <Tab.Screen name="Editar" component={NewsPage} />
+                </>
+            )}
             <Tab.Screen name="Settings" component={SettingsPage} />
         </Tab.Navigator>
     );
@@ -23,7 +30,7 @@ function Home() {
 const Stack = createNativeStackNavigator();
 
 export default function AppRoutes() {
-    const { authorized } = React.useContext(AuthContext);
+    const { authorized, user } = React.useContext(AuthContext);
 
     return (
         <Stack.Navigator initialRouteName='Home'>

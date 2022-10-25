@@ -11,7 +11,15 @@ export const AuthProvider = ({ children }) => {
         if (email == "a@a.com" && password == "123") {
             setUser({
                 email: "a@a.com",
-                name: "Joselito"
+                name: "Joselito",
+                role: "user"
+            })
+        }
+        else if (email == "e@e.com" && password == "123") {
+            setUser({
+                email: "e@e.com",
+                name: "Editor",
+                role: "editor"
             })
         }
         else {
